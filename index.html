@@ -1,0 +1,1166 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f2ec">
+  <title>Adriana Maluje | Makijaż ślubny i okazjonalny w Giżycku</title>
+  <meta name="description" content="Adriana Bękalska. Makijaże ślubne i okazjonalne, naturalny efekt i trwałość. Giżycko i okolice, także z dojazdem.">
+  <link rel="icon" type="image/x-icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="favicon-48.png" sizes="48x48">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root { --paper:#f6f2ec; --ink:#302b28; --muted:#756d65; --line:#d9d0c7; --rose:#b88e83; --warm:#e8dfd5; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:'DM Sans',Arial,sans-serif; }
+    button,a { -webkit-tap-highlight-color:transparent; }
+    a { color:inherit; }
+    .page { min-height:100svh; overflow:hidden; position:relative; isolation:isolate; background:linear-gradient(180deg,#f6f2ec 0%,#f4eee8 18%,#f8f4ef 34%,#efe5dd 50%,#f8f4ef 67%,#f2eae3 83%,#f6f2ec 100%); }
+    .page::before,.page::after { content:""; position:absolute; border-radius:50%; filter:blur(75px); pointer-events:none; z-index:0; }
+    .page::before { width:44vw; height:44vw; left:-20vw; top:28vh; background:#dfcbbd; opacity:.48; animation:ambientOne 18s ease-in-out infinite alternate; }
+    .page::after { width:37vw; height:37vw; right:-12vw; top:-16vw; background:#e9dcd0; opacity:.66; animation:ambientTwo 22s ease-in-out infinite alternate; }
+    .ambient-lines { position:absolute; inset:0 auto auto -9%; width:72%; height:100%; pointer-events:none; opacity:.44; z-index:0; animation:ambientLines 19s ease-in-out infinite alternate; }
+    .ambient-lines svg { display:block; width:100%; height:100%; }
+    .ambient-motifs { position:absolute; inset:0; z-index:0; overflow:hidden; pointer-events:none; }
+    .ambient-motif { position:absolute; color:var(--rose); opacity:.12; }
+    .ambient-motif svg { display:block; width:100%; height:100%; overflow:visible; }
+    .motif-flower { top:18%; right:-75px; width:310px; height:390px; animation:motifFloat 24s ease-in-out infinite alternate; }
+    .motif-brush { top:46%; left:-120px; width:390px; height:180px; color:#9d776e; opacity:.085; transform:rotate(-9deg); animation:motifBrush 21s ease-in-out infinite alternate; }
+    .motif-petals { top:69%; right:2%; width:220px; height:245px; opacity:.1; animation:motifPetals 28s ease-in-out infinite alternate; }
+    .motif-sparkles { top:34%; left:4%; width:150px; height:180px; opacity:.11; animation:motifGlow 9s ease-in-out infinite alternate; }
+    .shell { width:min(100% - 96px, 1400px); margin:auto; position:relative; z-index:1; }
+    header { width:100%; height:98px; display:flex; align-items:center; justify-content:space-between; gap:24px; padding:0 14px; position:relative; z-index:20; isolation:isolate; }
+    header::before { content:""; position:absolute; z-index:-1; top:0; bottom:0; left:50%; width:100vw; border-bottom:1px solid var(--line); background:#f6f2ecef; backdrop-filter:blur(16px); transform:translateX(-50%); }
+    .brand { text-decoration:none; display:block; flex:none; }
+    .brand img { display:block; width:214px; height:auto; }
+    .main-nav { display:flex; align-items:center; gap:clamp(20px,2.5vw,38px); }
+    .nav-links { display:flex; align-items:center; gap:clamp(16px,2vw,30px); }
+    .nav-links a { position:relative; padding:14px 0; color:#5f5751; text-decoration:none; font-size:10px; font-weight:600; letter-spacing:.105em; text-transform:uppercase; white-space:nowrap; }
+    .nav-links a::after { content:""; position:absolute; right:0; bottom:8px; left:0; height:1px; background:var(--rose); transform:scaleX(0); transform-origin:right; transition:transform .28s ease; }
+    .nav-links a:hover::after,.nav-links a:focus-visible::after { transform:scaleX(1); transform-origin:left; }
+    .nav-links a:hover,.nav-links a:focus-visible { color:var(--ink); }
+    .instagram-link { display:inline-flex; flex:none; align-items:center; gap:11px; text-decoration:none; padding:11px 15px; border:1px solid #bfaea4; border-radius:100px; background:#fbf8f3b8; color:var(--ink); font-size:12px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; transition:background .25s,color .25s,border-color .25s,transform .25s; }
+    .instagram-link svg { width:21px; height:21px; flex:none; }
+    .instagram-link:hover { color:var(--paper); background:var(--ink); border-color:var(--ink); transform:translateY(-2px); }
+    .instagram-link:focus-visible { outline:2px solid var(--rose); outline-offset:4px; }
+    .instagram-link .external { font-size:15px; font-weight:400; margin-left:2px; }
+    .menu-toggle { display:none; width:44px; height:44px; flex:none; padding:0; border:1px solid #cdbdb2; border-radius:50%; background:#fbf8f3b8; color:var(--ink); cursor:pointer; }
+    .menu-toggle span { display:block; width:17px; height:1px; margin:5px auto; background:currentColor; transition:transform .28s ease,opacity .2s ease; }
+    .menu-toggle[aria-expanded="true"] span:first-child { transform:translateY(3px) rotate(45deg); }
+    .menu-toggle[aria-expanded="true"] span:last-child { transform:translateY(-3px) rotate(-45deg); }
+    .mobile-menu { position:absolute; top:calc(100% + 1px); right:0; left:0; width:100%; max-width:100%; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1px; overflow:hidden; padding:12px; border:1px solid #d6c8be; border-top:0; background:#f6f2ecfa; box-shadow:0 24px 50px #45332820; backdrop-filter:blur(18px); opacity:0; visibility:hidden; transform:translateY(-9px); pointer-events:none; transition:opacity .25s ease,transform .25s ease,visibility .25s; }
+    .mobile-menu::before { content:""; position:absolute; right:-52px; bottom:-82px; width:190px; height:190px; border:1px solid #b88e832b; border-radius:50%; box-shadow:0 0 0 34px #b88e8309; pointer-events:none; }
+    .mobile-menu.is-open { opacity:1; visibility:visible; transform:translateY(0); pointer-events:auto; }
+    .mobile-menu-head { position:relative; z-index:1; grid-column:1/-1; display:flex; align-items:end; justify-content:space-between; gap:20px; padding:8px 15px 17px; border-bottom:1px solid #d8ccc3; }
+    .mobile-menu-head strong { font:400 23px/1 'Playfair Display',Georgia,serif; }
+    .mobile-menu-head span { color:var(--rose); font-size:8px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; }
+    .mobile-menu > a { display:flex; min-height:58px; align-items:center; justify-content:flex-start; gap:11px; padding:14px 16px; border-bottom:1px solid #dfd4cc; color:var(--ink); text-decoration:none; font:400 18px/1.2 'Playfair Display',Georgia,serif; background:#ffffff26; }
+    .mobile-menu > a:hover,.mobile-menu > a:focus-visible { background:#eadfd6; }
+    .mobile-menu > a span { color:var(--rose); font:italic 13px/1 'Playfair Display',Georgia,serif; }
+    .mobile-menu > .mobile-menu-contact { position:relative; z-index:1; grid-column:1/-1; min-height:55px; margin-top:8px; border:0; color:#fff8f2; background:var(--ink); font-family:'DM Sans',Arial,sans-serif; }
+    .mobile-menu > .mobile-menu-contact:hover,.mobile-menu > .mobile-menu-contact:focus-visible { color:#fff; background:#594640; }
+    .mobile-menu-contact svg { width:17px; height:17px; flex:none; }
+    .mobile-menu-contact b { margin-left:auto; font-size:9px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; }
+    .mobile-menu > .mobile-menu-contact span { color:#fff; font:600 10px/1 'DM Sans',Arial,sans-serif; letter-spacing:.12em; text-transform:uppercase; }
+    .mobile-menu-meta { grid-column:1/-1; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:14px 16px 4px; color:var(--muted); font-size:9px; letter-spacing:.1em; text-transform:uppercase; }
+    .hero { min-height:calc(100svh - 98px); display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr); align-items:center; gap:clamp(50px,7vw,120px); padding:58px 0 42px; }
+    .copy { padding-bottom:14px; position:relative; z-index:2; animation:rise .9s ease both; }
+    .eyebrow { display:flex; align-items:center; gap:13px; color:var(--muted); font-size:12px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; margin-bottom:31px; }
+    .eyebrow::before { content:""; display:block; width:33px; height:1px; background:var(--rose); }
+    h1 { font:400 clamp(59px,6.4vw,103px)/1.09 'Playfair Display',Georgia,serif; letter-spacing:-.055em; margin:0 0 30px; max-width:820px; }
+    h1 em { font-weight:400; color:var(--rose); }
+    .intro { color:var(--muted); font-size:17px; line-height:1.75; max-width:520px; margin:0 0 39px; }
+    .actions { display:flex; align-items:center; gap:29px; flex-wrap:wrap; }
+    .primary { display:inline-flex; align-items:center; justify-content:center; gap:22px; background:var(--ink); color:#fff; padding:19px 25px; min-height:62px; text-decoration:none; font-size:13px; font-weight:600; letter-spacing:.11em; text-transform:uppercase; transition:background .25s, transform .25s; }
+    .primary:hover { background:#674f48; transform:translateY(-2px); }
+    .primary span { font-size:24px; line-height:0; font-weight:400; margin-top:-2px; }
+    .secondary { text-decoration:none; padding:12px 0; border-bottom:1px solid var(--ink); font-size:13px; font-weight:600; letter-spacing:.11em; text-transform:uppercase; transition:color .25s,border-color .25s; }
+    .secondary:hover { color:var(--rose); border-color:var(--rose); }
+    .notes { display:flex; flex-wrap:wrap; column-gap:19px; row-gap:9px; align-items:center; margin-top:71px; color:var(--muted); font-size:12px; letter-spacing:.08em; text-transform:uppercase; }
+    .notes span + span::before { content:"•"; margin-right:19px; color:var(--rose); }
+    .visual { width:100%; height:auto; position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px; padding:15px 0 4px; animation:appear 1.15s .13s both; }
+    .visual::before { content:""; position:absolute; width:92%; height:calc(100% - 87px); background:var(--warm); left:9%; top:3%; border-radius:49% 49% 2px 2px; transform:rotate(5deg); animation:archFloat 8s ease-in-out infinite alternate; }
+    .photo-wrap { width:min(86%,470px); height:clamp(500px,55vw,650px); flex:none; overflow:hidden; border-radius:48% 48% 1px 1px; position:relative; box-shadow:0 25px 75px #5b43331c; background:#ede7e0; }
+    .photo { width:100%; height:100%; object-fit:cover; object-position:center 26%; position:absolute; inset:0; opacity:0; transform:scale(1.045); transition:opacity .65s ease,transform 1.2s ease; }
+    .photo.active { opacity:1; transform:scale(1); animation:photoDrift 5s linear both; }
+    .floating { position:absolute; left:-2%; bottom:94px; width:158px; height:158px; padding:14px; border:1px solid #fff9; background:#f6f2ecef; backdrop-filter:blur(15px); border-radius:50%; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; transform:rotate(-9deg); box-shadow:0 12px 30px #47382712; }
+    .floating b { font:italic 33px 'Playfair Display',Georgia,serif; font-weight:400; line-height:1; color:var(--rose); }
+    .floating span { display:block; max-width:112px; font-size:10px; letter-spacing:.1em; text-transform:uppercase; line-height:1.4; margin-top:7px; }
+    .photo-credit { position:absolute; right:-35px; top:50%; transform:rotate(90deg) translateX(50%); transform-origin:right center; font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:var(--muted); white-space:nowrap; }
+    .slider { position:relative; width:min(86%,470px); display:flex; justify-content:flex-end; align-items:center; gap:15px; min-height:45px; }
+    .counter { font:18px 'Playfair Display',Georgia,serif; letter-spacing:.03em; white-space:nowrap; }
+    .counter small { color:#a69b92; font-size:14px; }
+    .timer-track { width:38px; height:2px; background:var(--line); display:block; overflow:hidden; }
+    .timer-progress { height:100%; width:100%; display:block; background:var(--rose); transform-origin:left; animation:timerFill 5s linear both; }
+    .slider button { width:43px; height:43px; border:1px solid var(--line); border-radius:50%; color:var(--ink); background:transparent; cursor:pointer; font-size:20px; transition:background .2s,color .2s; }
+    .slider button:hover { background:var(--ink); color:white; }
+    .vertical { position:absolute; top:49%; right:-34px; transform:rotate(90deg) translateX(50%); transform-origin:right center; font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:var(--muted); white-space:nowrap; }
+    .portfolio { position:relative; border-top:1px solid var(--line); padding:106px 0 140px; isolation:isolate; }
+    .portfolio::before { content:""; position:absolute; inset:0 -12vw -8vw; z-index:0; background:linear-gradient(180deg,#f6f2ec00 0%,#eee6de91 55%,#f6f2ec 100%); pointer-events:none; }
+    .portfolio > * { position:relative; z-index:1; }
+    .portfolio-head { display:grid; grid-template-columns:1fr minmax(250px,420px); align-items:end; gap:40px; margin-bottom:48px; }
+    .portfolio-kicker { display:block; margin-bottom:17px; color:var(--rose); font-size:12px; font-weight:600; letter-spacing:.23em; text-transform:uppercase; }
+    .portfolio h2 { margin:0; font:400 clamp(45px,5vw,75px)/1.1 'Playfair Display',Georgia,serif; letter-spacing:-.045em; }
+    .portfolio-intro { margin:0 0 5px; color:var(--muted); font-size:16px; line-height:1.8; }
+    .portfolio-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:21px; align-items:start; }
+    .work-card { position:relative; margin:0; min-width:0; }
+    .work-card:nth-child(2),.work-card:nth-child(5) { transform:translateY(39px); }
+    .work-open { display:block; width:100%; padding:0; border:0; background:#e3d9cf; text-align:left; cursor:zoom-in; overflow:hidden; position:relative; box-shadow:0 15px 40px #624a3d1b; }
+    .work-open::after { content:"POWIĘKSZ ↗"; position:absolute; right:16px; bottom:16px; padding:10px 12px; background:#f6f2ecef; color:var(--ink); font-size:10px; font-weight:600; letter-spacing:.12em; opacity:0; transform:translateY(8px); transition:opacity .25s,transform .25s; }
+    .work-open:hover::after,.work-open:focus-visible::after { opacity:1; transform:translateY(0); }
+    .work-open:focus-visible { outline:3px solid var(--rose); outline-offset:4px; }
+    .work-card img { display:block; width:100%; aspect-ratio:3/4; object-fit:cover; object-position:center 24%; transition:transform .7s ease,filter .5s ease; }
+    .work-open:hover img,.work-open:focus-visible img { transform:scale(1.045); filter:saturate(1.08); }
+    .work-card figcaption { display:flex; align-items:baseline; gap:13px; width:100%; padding:16px 2px 0; color:var(--ink); }
+    .work-index { color:var(--rose); font:18px 'Playfair Display',Georgia,serif; }
+    .work-title { flex:1; font-size:14px; line-height:1.45; }
+    .work-expand { color:var(--rose); font-size:18px; }
+    .portfolio-end { margin-top:105px; display:flex; justify-content:space-between; align-items:center; gap:24px; border-top:1px solid var(--line); padding-top:30px; color:var(--muted); font-size:14px; }
+    .portfolio-end a { display:inline-flex; align-items:center; gap:10px; color:var(--ink); font-size:12px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; text-decoration:none; border-bottom:1px solid var(--ink); padding-bottom:8px; transition:color .2s,border-color .2s; }
+    .portfolio-end a:hover { color:var(--rose); border-color:var(--rose); }
+    .portfolio-end svg { width:18px; height:18px; }
+    .offer { position:relative; padding:110px 0 125px; border-top:1px solid var(--line); isolation:isolate; }
+    .offer::before { content:""; position:absolute; width:480px; height:480px; right:-210px; top:110px; z-index:-1; border-radius:50%; background:radial-gradient(circle,#e7d4c59c 0%,#e7d4c500 70%); pointer-events:none; animation:offerGlow 13s ease-in-out infinite alternate; }
+    .offer-head { display:grid; grid-template-columns:minmax(0,1fr) minmax(270px,410px); gap:50px; align-items:end; margin-bottom:54px; }
+    .offer-kicker { display:block; margin-bottom:18px; color:var(--rose); font-size:12px; font-weight:600; letter-spacing:.23em; text-transform:uppercase; }
+    .offer h2 { max-width:690px; margin:0; font:400 clamp(48px,5.5vw,82px)/1.08 'Playfair Display',Georgia,serif; letter-spacing:-.05em; }
+    .offer h2 em { color:var(--rose); font-weight:400; }
+    .offer-lead { margin:0 0 5px; color:var(--muted); font-size:16px; line-height:1.85; }
+    .offer-label { display:inline-flex; align-items:center; gap:10px; margin-bottom:17px; color:#735a50; font-size:11px; font-weight:600; letter-spacing:.13em; text-transform:uppercase; }
+    .offer-label::before { content:""; width:22px; height:1px; background:var(--rose); }
+    .offer-list { display:grid; gap:24px; }
+    .offer-item { position:relative; isolation:isolate; display:grid; grid-template-columns:72px minmax(0,1fr) minmax(270px,350px); min-height:480px; align-items:stretch; border:1px solid #d9c8bc; background:#fbf8f3; overflow:hidden; box-shadow:0 16px 45px #5e473510; transition:box-shadow .35s ease,transform .35s ease; }
+    .offer-item:nth-child(2) { background:#f1e9e1; }
+    .offer-item:hover { transform:translateY(-3px); box-shadow:0 22px 54px #5e473521; }
+    .offer-number { color:var(--rose); font:italic 27px/1 'Playfair Display',Georgia,serif; padding:38px 0 0 31px; }
+    .offer-content { display:flex; flex-direction:column; align-items:flex-start; padding:39px 43px 39px 0; min-width:0; }
+    .offer-type { display:block; color:#a38176; font-size:10px; font-weight:600; letter-spacing:.17em; text-transform:uppercase; margin:2px 0 12px; }
+    .offer-item h3 { margin:0 0 15px; font:400 clamp(30px,3vw,42px)/1.15 'Playfair Display',Georgia,serif; letter-spacing:-.035em; }
+    .offer-description { max-width:580px; margin:0; color:var(--muted); font-size:15px; line-height:1.8; }
+    .offer-details { display:flex; flex-wrap:wrap; gap:8px; margin-top:21px; }
+    .offer-details span { border:1px solid #d9c9be; border-radius:30px; padding:7px 11px; color:#695a53; background:#fbf8f47d; font-size:11px; letter-spacing:.01em; }
+    .offer-price { width:100%; margin-top:auto; padding-top:27px; border-top:1px solid #d7c8bc; text-align:left; }
+    .offer-price small { display:block; color:var(--muted); font-size:11px; letter-spacing:.1em; text-transform:uppercase; }
+    .offer-price strong { display:block; margin-top:9px; font:400 clamp(37px,3.7vw,52px)/1 'Playfair Display',Georgia,serif; letter-spacing:-.04em; white-space:nowrap; }
+    .offer-price strong span { font-size:.46em; letter-spacing:0; }
+    .offer-side { position:relative; min-height:480px; min-width:0; overflow:hidden; background:#dfd0c4; }
+    .offer-side::after { content:""; position:absolute; inset:48% 0 0; pointer-events:none; background:linear-gradient(#27201b00,#27201b96); }
+    .offer-side video { display:block; width:100%; height:100%; position:absolute; inset:0; object-fit:cover; object-position:center 23%; }
+    .offer-video-top { position:absolute; top:20px; left:20px; z-index:1; padding:10px 13px; border:1px solid #fff8; background:#f8f3ecdb; backdrop-filter:blur(10px); color:#4f4039; font-size:10px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; }
+    .offer-video-bottom { position:absolute; left:20px; right:20px; bottom:20px; z-index:1; display:flex; justify-content:space-between; align-items:end; gap:13px; color:white; }
+    .offer-video-phase { display:block; margin-bottom:10px; font:italic 28px/1 'Playfair Display',Georgia,serif; }
+    .offer-video-source { color:white; text-decoration:none; font-size:10px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; border-bottom:1px solid #fff9; padding-bottom:5px; }
+    .offer-video-source:hover { border-color:white; }
+    .offer-video-toggle { flex:none; display:grid; place-items:center; width:40px; height:40px; border:1px solid #fff9; border-radius:50%; background:#f6f2ec2b; backdrop-filter:blur(10px); color:white; cursor:pointer; font-size:17px; }
+    .offer-video-toggle:hover { background:#f6f2ec66; }
+    .offer-foot { display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; gap:35px; margin-top:44px; padding:34px clamp(25px,4vw,55px); background:#eae0d6; position:relative; overflow:hidden; }
+    .offer-foot::after { content:""; position:absolute; width:180px; height:180px; border:1px solid #cdb8a9; border-radius:50%; right:18%; top:-130px; box-shadow:0 0 0 31px #cdb8a939,0 0 0 64px #cdb8a91c; pointer-events:none; }
+    .offer-foot-copy { position:relative; z-index:1; }
+    .offer-foot small { display:block; margin-bottom:9px; color:#9d766c; font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; }
+    .offer-foot p { max-width:650px; margin:0; color:#554a44; font-size:14px; line-height:1.7; }
+    .offer-foot a { position:relative; z-index:1; display:inline-flex; align-items:center; justify-content:center; gap:20px; min-height:54px; padding:14px 21px; background:var(--ink); color:#fff; text-decoration:none; text-transform:uppercase; white-space:nowrap; font-size:11px; font-weight:600; letter-spacing:.1em; transition:background .25s,transform .25s; }
+    .offer-foot a:hover { background:#674f48; transform:translateY(-3px); }
+    .offer-foot a span { font-size:19px; line-height:0; }
+    .offer a:focus-visible { outline:2px solid var(--rose); outline-offset:4px; }
+    .about { padding:115px 0 135px; border-top:1px solid var(--line); position:relative; }
+    .about-panel { display:grid; grid-template-columns:minmax(330px,.82fr) minmax(0,1.18fr); min-height:720px; overflow:hidden; position:relative; background:#332e2b; color:#f7f1ea; box-shadow:0 28px 75px #49372b1f; }
+    .about-panel::after { content:""; position:absolute; width:310px; height:310px; right:-155px; top:-155px; border:1px solid #d9bdb050; border-radius:50%; box-shadow:0 0 0 46px #d9bdb01a,0 0 0 92px #d9bdb00d; pointer-events:none; }
+    .about-portrait { min-width:0; position:relative; overflow:hidden; background:#b5aea3; }
+    .about-portrait::after { content:""; position:absolute; inset:45% 0 0; background:linear-gradient(#201b1800,#201b1882); pointer-events:none; }
+    .about-portrait img { display:block; width:100%; height:100%; position:absolute; inset:0; object-fit:cover; object-position:center 38%; transition:transform 1.2s ease; }
+    .about-panel:hover .about-portrait img { transform:scale(1.025); }
+    .about-signature { position:absolute; left:30px; right:30px; bottom:28px; z-index:1; display:flex; justify-content:space-between; align-items:end; gap:20px; }
+    .about-signature strong { display:block; font:italic 31px/1 'Playfair Display',Georgia,serif; font-weight:400; }
+    .about-signature span { display:block; margin-top:8px; color:#f5ede5c7; font-size:10px; letter-spacing:.15em; text-transform:uppercase; }
+    .about-signature a { display:grid; place-items:center; width:42px; height:42px; flex:none; border:1px solid #fff8; border-radius:50%; color:white; text-decoration:none; font-size:17px; backdrop-filter:blur(10px); background:#fff1; transition:background .25s; }
+    .about-signature a svg { display:block; width:20px; height:20px; }
+    .about-signature a:hover { background:#fff3; }
+    .about-copy { padding:clamp(58px,7vw,98px) clamp(42px,7vw,100px) 65px; position:relative; z-index:1; }
+    .about-kicker { display:flex; align-items:center; gap:13px; margin-bottom:24px; color:#d9b2a8; font-size:11px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; }
+    .about-kicker::before { content:""; width:32px; height:1px; background:#cda398; }
+    .about h2 { max-width:710px; margin:0 0 28px; font:400 clamp(47px,5vw,76px)/1.08 'Playfair Display',Georgia,serif; letter-spacing:-.048em; }
+    .about h2 em { color:#d2a59a; font-weight:400; }
+    .about-intro { max-width:650px; margin:0; color:#eee5ddc9; font-size:16px; line-height:1.85; }
+    .about-quote { margin:37px 0 39px; padding:5px 0 5px 28px; border-left:1px solid #cda398; color:#f8f2eb; font:italic 24px/1.5 'Playfair Display',Georgia,serif; }
+    .about-values { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); border-top:1px solid #ffffff24; border-bottom:1px solid #ffffff24; }
+    .about-value { padding:25px 20px 26px 0; }
+    .about-value + .about-value { padding-left:20px; border-left:1px solid #ffffff24; }
+    .about-value small { display:block; margin-bottom:11px; color:#d3a99e; font-size:10px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; }
+    .about-value h3 { margin:0 0 9px; color:#fffaf5; font:400 20px/1.25 'Playfair Display',Georgia,serif; }
+    .about-value p { margin:0; color:#e5dbd2a8; font-size:12px; line-height:1.65; }
+    .about-bottom { display:flex; align-items:center; justify-content:space-between; gap:25px; margin-top:33px; }
+    .about-bottom span { max-width:380px; color:#e6ddd3a3; font-size:11px; line-height:1.65; }
+    .about-bottom a { display:inline-flex; align-items:center; gap:17px; flex:none; color:#fff7f1; text-decoration:none; padding-bottom:7px; border-bottom:1px solid #d6b0a5; font-size:11px; font-weight:600; letter-spacing:.11em; text-transform:uppercase; transition:color .25s,border-color .25s; }
+    .about-bottom a:hover { color:#d6b0a5; border-color:#fff7f1; }
+    .about a:focus-visible { outline:2px solid #d6b0a5; outline-offset:5px; }
+    .transformation { padding:115px 0 140px; border-top:1px solid var(--line); position:relative; isolation:isolate; }
+    .transformation::before { content:""; position:absolute; width:470px; height:470px; left:-250px; top:23%; z-index:-1; border-radius:50%; background:radial-gradient(circle,#dfc7b9a8 0%,#dfc7b900 70%); pointer-events:none; }
+    .transformation-head { display:grid; grid-template-columns:minmax(0,1fr) minmax(270px,410px); align-items:end; gap:48px; margin-bottom:52px; }
+    .transformation-kicker { display:block; margin-bottom:17px; color:var(--rose); font-size:12px; font-weight:600; letter-spacing:.23em; text-transform:uppercase; }
+    .transformation h2 { max-width:750px; margin:0; font:400 clamp(48px,5.5vw,82px)/1.08 'Playfair Display',Georgia,serif; letter-spacing:-.05em; }
+    .transformation h2 em { color:var(--rose); font-weight:400; }
+    .transformation-lead { margin:0 0 5px; color:var(--muted); font-size:16px; line-height:1.85; }
+    .transformation-layout { display:grid; grid-template-columns:minmax(360px,.92fr) minmax(330px,.58fr); align-items:stretch; gap:clamp(28px,5vw,75px); }
+    .comparison-widget { --compare:50%; position:relative; width:100%; aspect-ratio:4/5; overflow:hidden; background:#ded3ca; box-shadow:0 23px 65px #59423624; user-select:none; touch-action:pan-y; }
+    .comparison-widget > img { position:absolute; inset:0; display:block; width:100%; height:100%; object-fit:cover; }
+    .comparison-after { clip-path:inset(0 calc(100% - var(--compare)) 0 0); }
+    .comparison-shade { position:absolute; inset:0; pointer-events:none; background:linear-gradient(90deg,#241b1624 0%,transparent 18%,transparent 82%,#241b1624 100%); }
+    .comparison-divider { position:absolute; top:0; bottom:0; left:var(--compare); width:2px; margin-left:-1px; background:#fff; box-shadow:0 0 18px #2c211ba3; pointer-events:none; }
+    .comparison-handle { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); display:grid; place-items:center; width:58px; height:58px; border:1px solid #fff; border-radius:50%; background:#f7f1e9e8; color:var(--ink); box-shadow:0 8px 26px #24191438; font-size:16px; letter-spacing:4px; padding-left:4px; }
+    .comparison-range { position:absolute; inset:0; width:100%; height:100%; margin:0; opacity:0; cursor:ew-resize; z-index:3; }
+    .comparison-range:focus-visible + .comparison-focus { position:absolute; inset:7px; z-index:2; border:2px solid #fff; box-shadow:0 0 0 2px var(--rose); pointer-events:none; }
+    .comparison-label { position:absolute; top:20px; z-index:2; padding:10px 13px; background:#f7f1e9df; backdrop-filter:blur(10px); color:var(--ink); font-size:10px; font-weight:600; letter-spacing:.15em; text-transform:uppercase; pointer-events:none; }
+    .comparison-label.after { left:20px; }
+    .comparison-label.before { right:20px; }
+    .transformation-copy { display:flex; flex-direction:column; justify-content:center; padding:clamp(35px,5vw,70px) 0; }
+    .transformation-index { color:var(--rose); font:italic 28px/1 'Playfair Display',Georgia,serif; }
+    .transformation-copy h3 { margin:24px 0 19px; font:400 clamp(34px,3.6vw,52px)/1.14 'Playfair Display',Georgia,serif; letter-spacing:-.04em; }
+    .transformation-copy > p { margin:0; color:var(--muted); font-size:15px; line-height:1.85; }
+    .compare-features { margin:35px 0 33px; border-top:1px solid var(--line); }
+    .compare-feature { display:grid; grid-template-columns:34px 1fr; gap:12px; padding:18px 0; border-bottom:1px solid var(--line); }
+    .compare-feature b { color:var(--rose); font:italic 18px/1.2 'Playfair Display',Georgia,serif; font-weight:400; }
+    .compare-feature span { color:#5f554f; font-size:13px; line-height:1.55; }
+    .compare-source { display:inline-flex; align-items:center; gap:15px; align-self:flex-start; color:var(--ink); text-decoration:none; padding-bottom:7px; border-bottom:1px solid var(--ink); font-size:11px; font-weight:600; letter-spacing:.11em; text-transform:uppercase; transition:color .25s,border-color .25s; }
+    .compare-source:hover { color:var(--rose); border-color:var(--rose); }
+    .compare-source:focus-visible { outline:2px solid var(--rose); outline-offset:5px; }
+    .reviews { position:relative; padding:76px 0 82px; border-top:1px solid var(--line); }
+    .reviews::before { content:""; position:absolute; right:-180px; top:30px; width:330px; height:330px; border-radius:50%; background:radial-gradient(circle,#dec3b36b 0%,#dec3b300 70%); pointer-events:none; }
+    .reviews-head { position:relative; display:flex; align-items:end; justify-content:space-between; gap:34px; margin-bottom:30px; }
+    .reviews-kicker { display:block; margin-bottom:12px; color:var(--rose); font-size:10px; font-weight:600; letter-spacing:.21em; text-transform:uppercase; }
+    .reviews h2 { max-width:650px; margin:0; font:400 clamp(40px,4.2vw,62px)/1.05 'Playfair Display',Georgia,serif; letter-spacing:-.045em; }
+    .reviews h2 em { color:var(--rose); font-weight:400; }
+    .reviews-controls { display:flex; align-items:center; gap:10px; flex:none; }
+    .reviews-count { min-width:48px; color:var(--muted); font-size:10px; letter-spacing:.12em; text-align:center; }
+    .reviews-arrow { display:grid; place-items:center; width:42px; height:42px; border:1px solid #cdbdb2; border-radius:50%; background:#fbf8f3b8; color:var(--ink); font-size:17px; cursor:pointer; transition:background .25s,color .25s,transform .25s; }
+    .reviews-arrow:hover { background:var(--ink); color:#fff; transform:translateY(-2px); }
+    .reviews-arrow:focus-visible { outline:2px solid var(--rose); outline-offset:4px; }
+    .reviews-viewport { position:relative; }
+    .reviews-viewport::after { content:""; position:absolute; top:0; right:-1px; bottom:10px; width:34px; pointer-events:none; background:linear-gradient(90deg,transparent,var(--paper)); }
+    .reviews-track { display:flex; gap:14px; overflow-x:auto; padding:0 48px 14px 0; scroll-snap-type:x mandatory; scroll-padding-left:0; overscroll-behavior-inline:contain; scrollbar-width:none; }
+    .reviews-track::-webkit-scrollbar { display:none; }
+    .review-card { position:relative; display:flex; flex:0 0 clamp(275px,27vw,325px); height:250px; flex-direction:column; justify-content:space-between; scroll-snap-align:start; padding:22px 21px 20px; border:1px solid #dacbc0; background:#fbf8f3; box-shadow:0 11px 30px #5d44350b; transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease; }
+    .review-card:hover { transform:translateY(-4px); border-color:#c7ab9e; box-shadow:0 23px 54px #5d443519; }
+    .review-card::before { content:"“"; color:#d7afa4; font:italic 47px/.62 'Playfair Display',Georgia,serif; }
+    .review-text { display:-webkit-box; overflow:hidden; margin:13px 0 18px; color:#3e342f; font:400 18px/1.42 'Playfair Display',Georgia,serif; -webkit-box-orient:vertical; -webkit-line-clamp:5; }
+    .review-author { display:flex; align-items:center; gap:10px; padding-top:15px; border-top:1px solid var(--line); }
+    .review-avatar { width:40px; height:40px; flex:none; border-radius:50%; object-fit:cover; background:#dfd4cb; box-shadow:0 0 0 3px #efe5dc; }
+    .review-person { min-width:0; flex:1; }
+    .review-person strong { display:block; overflow:hidden; color:var(--ink); font-size:11px; font-weight:600; line-height:1.35; text-overflow:ellipsis; white-space:nowrap; }
+    .review-person span { display:block; overflow:hidden; margin-top:3px; color:var(--muted); font-size:9px; text-overflow:ellipsis; white-space:nowrap; }
+    .review-source { display:grid; place-items:center; width:30px; height:30px; flex:none; border:1px solid #d5c4b9; border-radius:50%; color:var(--ink); text-decoration:none; transition:background .25s,color .25s; }
+    .review-source:hover,.review-source:focus-visible { background:var(--ink); color:#fff; }
+    .review-source svg { width:14px; height:14px; }
+    .reviews-note { display:flex; align-items:center; gap:10px; margin:12px 0 0; color:var(--muted); font-size:10px; line-height:1.45; }
+    .reviews-note::before { content:""; width:25px; height:1px; flex:none; background:var(--rose); }
+    .site-footer { margin:0 0 17px; }
+    .footer-card { position:relative; isolation:isolate; overflow:hidden; padding:clamp(38px,5vw,68px) clamp(27px,5vw,72px) 0; color:#f8f1eb; background:linear-gradient(125deg,#2f2926 0%,#3a2f2b 56%,#4b3833 100%); box-shadow:0 25px 70px #3d2d2521; }
+    .footer-card::before { content:""; position:absolute; z-index:-1; top:-180px; right:-85px; width:430px; height:430px; border:1px solid #d5aca154; border-radius:50%; box-shadow:0 0 0 55px #d5aca10b,0 0 0 115px #d5aca108; }
+    .footer-card::after { content:""; position:absolute; z-index:-1; right:24%; bottom:-130px; width:330px; height:220px; border-radius:50%; background:#b98d8240; filter:blur(70px); }
+    .footer-top { display:grid; grid-template-columns:minmax(0,1.1fr) minmax(270px,.62fr); align-items:end; gap:clamp(35px,7vw,100px); padding-bottom:clamp(35px,5vw,61px); }
+    .footer-brand-logo { display:block; width:clamp(180px,19vw,235px); height:auto; margin:0 0 31px; }
+    .footer-kicker { display:flex; align-items:center; gap:12px; margin-bottom:17px; color:#d7aea4; font-size:10px; font-weight:600; letter-spacing:.2em; text-transform:uppercase; }
+    .footer-kicker::before { content:""; width:30px; height:1px; background:#d7aea4; }
+    .footer-title { max-width:750px; margin:0; font:400 clamp(43px,5.2vw,74px)/1.06 'Playfair Display',Georgia,serif; letter-spacing:-.045em; }
+    .footer-title em { color:#d9b1a7; font-weight:400; }
+    .footer-contact { padding-bottom:5px; }
+    .footer-contact p { margin:0 0 24px; color:#eee3d9a8; font-size:14px; line-height:1.75; }
+    .footer-instagram { display:inline-flex; min-height:54px; align-items:center; justify-content:center; gap:13px; padding:14px 20px; border:1px solid #e1c4ba6b; color:#fff8f2; background:#ffffff08; text-decoration:none; font-size:10px; font-weight:600; letter-spacing:.13em; text-transform:uppercase; transition:background .25s,color .25s,transform .25s,border-color .25s; }
+    .footer-instagram:hover,.footer-instagram:focus-visible { transform:translateY(-2px); border-color:#f3ddd5; color:#3b302c; background:#f3ddd5; }
+    .footer-instagram svg { width:18px; height:18px; }
+    .footer-nav { display:flex; flex-wrap:wrap; align-items:center; gap:14px 28px; padding:24px 0; border-top:1px solid #ffffff1f; border-bottom:1px solid #ffffff1f; }
+    .footer-nav a { color:#f5ece4ad; text-decoration:none; font-size:9px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; transition:color .2s; }
+    .footer-nav a:hover,.footer-nav a:focus-visible { color:#fff; }
+    .footer-meta { display:flex; align-items:center; justify-content:space-between; gap:25px; padding:21px 0 23px; color:#eadfd58a; font-size:9px; letter-spacing:.1em; text-transform:uppercase; }
+    .footer-meta a { display:inline-flex; align-items:center; gap:8px; color:#f3e8dfc9; text-decoration:none; }
+    .footer-meta a:hover,.footer-meta a:focus-visible { color:#fff; }
+    .creator-credit { position:relative; isolation:isolate; display:grid; min-width:0; grid-template-columns:minmax(0,1fr) auto; align-items:center; gap:16px; min-height:68px; margin-top:24px; overflow:hidden; padding:10px 13px; border:1px solid #d6c6bb; border-radius:0; color:#62564f; background:linear-gradient(105deg,#f5f0ea,#eee5dd 58%,#e8dcd4); box-shadow:0 13px 34px #4a352717,inset 0 1px 0 #ffffff9c; }
+    .creator-credit::before { content:""; position:absolute; z-index:-1; top:0; right:0; left:0; height:2px; background:linear-gradient(90deg,#b98e83,#d8b2a8 55%,#8d7068); opacity:.8; }
+    .creator-credit::after { content:""; position:absolute; z-index:-1; right:13%; bottom:-58px; width:170px; height:92px; border-radius:50%; background:#b88e8329; filter:blur(28px); }
+    .creator-brand { display:flex; min-width:0; width:max-content; max-width:100%; align-items:center; gap:12px; color:inherit; text-decoration:none; }
+    .creator-logo { display:block; width:44px; height:44px; flex:none; padding:5px; border:1px solid #cdbbb0; border-radius:0; object-fit:contain; background:#e9dfd7; filter:grayscale(1) sepia(.42) saturate(.72) contrast(.9) drop-shadow(0 6px 12px #5f46332b); }
+    .creator-text { display:grid; min-width:0; gap:3px; overflow:hidden; white-space:nowrap; }
+    .creator-text small { color:#8d7d74; font-size:7px; font-weight:700; letter-spacing:.13em; text-transform:uppercase; }
+    .creator-text > span { display:flex; min-width:0; align-items:baseline; gap:8px; overflow:hidden; text-overflow:ellipsis; }
+    .creator-text strong { color:#5b4741; font-size:12px; letter-spacing:-.01em; }
+    .creator-text em { overflow:hidden; color:#8b7a70; font-size:8px; font-style:normal; text-overflow:ellipsis; }
+    .creator-actions { display:flex; align-items:center; gap:7px; }
+    .creator-actions a { display:inline-flex; min-height:36px; align-items:center; justify-content:center; gap:7px; padding:0 12px; border:1px solid #cdb9ad; border-radius:0; color:#66554e; background:#faf6f170; text-decoration:none; font-size:8px; font-weight:700; letter-spacing:.035em; white-space:nowrap; transition:transform .2s,border-color .2s,color .2s,background .2s; }
+    .creator-actions a:hover,.creator-actions a:focus-visible { transform:translateY(-1px); border-color:#a97d72; color:#4b3934; background:#ddc5bc; }
+    .creator-actions svg { width:15px; height:15px; fill:none; stroke:currentColor; stroke-width:1.55; stroke-linecap:round; stroke-linejoin:round; }
+    .creator-actions .creator-instagram { width:34px; padding:0; }
+    .creator-actions .creator-instagram circle:last-child { fill:currentColor; stroke:none; }
+    @media (prefers-reduced-motion:no-preference) {
+      .offer.motion-ready .offer-head,.offer.motion-ready .offer-item,.offer.motion-ready .offer-foot { opacity:0; transform:translateY(22px); transition:opacity .75s ease,transform .75s ease,background .4s ease; }
+      .offer.motion-ready .offer-head.is-visible,.offer.motion-ready .offer-item.is-visible,.offer.motion-ready .offer-foot.is-visible { opacity:1; transform:translateY(0); }
+      .offer.motion-ready .offer-item:nth-child(2) { transition-delay:.07s; }
+      .offer.motion-ready .offer-item:nth-child(3) { transition-delay:.14s; }
+      .about.motion-ready .about-portrait,.about.motion-ready .about-copy { opacity:0; transform:translateY(24px); transition:opacity .8s ease,transform .8s ease; }
+      .about.motion-ready .about-copy { transition-delay:.12s; }
+      .about.motion-ready .about-portrait.is-visible,.about.motion-ready .about-copy.is-visible { opacity:1; transform:translateY(0); }
+      .transformation.motion-ready .comparison-widget,.transformation.motion-ready .transformation-copy { opacity:0; transform:translateY(24px); transition:opacity .8s ease,transform .8s ease; }
+      .transformation.motion-ready .transformation-copy { transition-delay:.12s; }
+      .transformation.motion-ready .comparison-widget.is-visible,.transformation.motion-ready .transformation-copy.is-visible { opacity:1; transform:translateY(0); }
+      .reviews.motion-ready .reviews-head,.reviews.motion-ready .reviews-viewport,.reviews.motion-ready .reviews-note { opacity:0; transform:translateY(22px); transition:opacity .8s ease,transform .8s ease; }
+      .reviews.motion-ready .reviews-viewport { transition-delay:.1s; }
+      .reviews.motion-ready .reviews-note { transition-delay:.18s; }
+      .reviews.motion-ready .reviews-head.is-visible,.reviews.motion-ready .reviews-viewport.is-visible,.reviews.motion-ready .reviews-note.is-visible { opacity:1; transform:translateY(0); }
+      .site-footer.motion-ready .footer-card,.site-footer.motion-ready .creator-credit { opacity:0; transform:translateY(22px); transition:opacity .8s ease,transform .8s ease; }
+      .site-footer.motion-ready .creator-credit { transition-delay:.12s; }
+      .site-footer.motion-ready .footer-card.is-visible,.site-footer.motion-ready .creator-credit.is-visible { opacity:1; transform:translateY(0); }
+    }
+    .work-dialog { width:min(540px,calc(100vw - 28px)); max-height:calc(100dvh - 28px); padding:20px 22px 24px; border:1px solid #d9d0c7; background:var(--paper); color:var(--ink); box-shadow:0 32px 100px #1e1715a3; }
+    .work-dialog::backdrop { background:#211a1ad1; backdrop-filter:blur(6px); }
+    .dialog-close { display:grid; place-items:center; width:38px; height:38px; margin:0 0 13px auto; border:1px solid var(--line); border-radius:50%; background:transparent; color:var(--ink); font-size:24px; line-height:1; cursor:pointer; }
+    .dialog-close:hover,.dialog-close:focus-visible { background:var(--ink); color:var(--paper); }
+    .dialog-image { display:block; width:auto; max-width:100%; max-height:62dvh; margin:0 auto; object-fit:contain; background:#e3d9cf; }
+    .dialog-caption { padding-top:19px; border-top:1px solid var(--line); margin-top:19px; }
+    .dialog-caption small { color:var(--rose); font-size:11px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; }
+    .dialog-caption p { margin:10px 0 0; font:400 clamp(22px,3vw,29px)/1.25 'Playfair Display',Georgia,serif; }
+    @keyframes rise { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes appear { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes ambientOne { from { transform:translate(-2%,4%) scale(.92); } to { transform:translate(17%,-14%) scale(1.14); } }
+    @keyframes ambientTwo { from { transform:translate(0,0) scale(1); } to { transform:translate(-15%,15%) scale(1.16); } }
+    @keyframes ambientLines { from { transform:translate(-2%,0) rotate(-2deg); } to { transform:translate(4%,-3%) rotate(3deg); } }
+    @keyframes motifFloat { from { transform:translate3d(0,-18px,0) rotate(-5deg); opacity:.08; } to { transform:translate3d(-38px,34px,0) rotate(4deg); opacity:.15; } }
+    @keyframes motifBrush { from { transform:translate3d(-20px,0,0) rotate(-11deg) scaleX(.94); } to { transform:translate3d(64px,24px,0) rotate(-5deg) scaleX(1.06); } }
+    @keyframes motifPetals { from { transform:translate3d(18px,-22px,0) rotate(8deg); } to { transform:translate3d(-24px,35px,0) rotate(-9deg); } }
+    @keyframes motifGlow { from { transform:scale(.88) rotate(-4deg); opacity:.06; } to { transform:scale(1.08) rotate(4deg); opacity:.15; } }
+    @keyframes archFloat { from { transform:translateY(-5px) rotate(4deg); } to { transform:translateY(11px) rotate(7deg); } }
+    @keyframes photoDrift { from { transform:scale(1); } to { transform:scale(1.035); } }
+    @keyframes timerFill { from { transform:scaleX(0); } to { transform:scaleX(1); } }
+    @keyframes offerGlow { from { transform:translate(-26px,10px) scale(.94); } to { transform:translate(23px,-25px) scale(1.1); } }
+    @media (max-width:1000px) {
+      .shell { width:min(100% - 64px,1400px); max-width:calc(100vw - 32px); }
+      .hero { gap:32px; }
+      h1 { font-size:clamp(55px,7vw,80px); }
+      .photo-wrap { height:clamp(450px,58vw,570px); }
+      .floating { width:126px; height:126px; left:-7%; }
+      .floating b { font-size:28px; }
+      .floating span { font-size:9px; }
+      .vertical,.photo-credit { display:none; }
+      .portfolio-grid { gap:14px; }
+      .offer-item { grid-template-columns:51px minmax(0,1fr) minmax(270px,34%); }
+      .offer-number { padding-left:21px; }
+      .offer-content { padding-right:28px; }
+      .about-panel { grid-template-columns:minmax(290px,.7fr) minmax(0,1.3fr); }
+      .about-copy { padding-left:48px; padding-right:48px; }
+      .about-values { grid-template-columns:1fr; }
+      .about-value { padding:18px 0; }
+      .about-value + .about-value { padding-left:0; border-left:0; border-top:1px solid #ffffff24; }
+      .transformation-layout { grid-template-columns:minmax(350px,.95fr) minmax(290px,.55fr); gap:34px; }
+      .nav-links { display:none; }
+      .main-nav { gap:9px; }
+      .menu-toggle { display:block; }
+    }
+    @media (max-width:720px) {
+      .shell { width:min(100% - 38px,550px); }
+      header { height:75px; gap:10px; padding:0 7px; }
+      .brand img { width:172px; }
+      .instagram-link { padding:10px 12px; gap:7px; font-size:10px; }
+      .instagram-link svg { width:18px; height:18px; }
+      .instagram-link > span:not(.external) { display:none; }
+      .instagram-link .external { display:none; }
+      .mobile-menu { grid-template-columns:1fr 1fr; padding:9px; }
+      .mobile-menu-head { padding:8px 12px 15px; }
+      .mobile-menu-head strong { font-size:21px; }
+      .mobile-menu > a { min-height:55px; padding:13px 14px; font-size:17px; }
+      .hero { min-height:auto; display:flex; flex-direction:column; align-items:stretch; gap:36px; padding:57px 0 30px; }
+      .copy { padding:0; }
+      .eyebrow { margin-bottom:20px; font-size:10px; letter-spacing:.16em; }
+      h1 { font-size:clamp(52px,12vw,74px); margin-bottom:20px; }
+      .intro { font-size:15px; margin-bottom:27px; line-height:1.7; }
+      .actions { gap:22px; }
+      .primary { min-height:56px; padding:16px 20px; font-size:11px; }
+      .secondary { font-size:11px; }
+      .notes { margin-top:35px; font-size:10px; column-gap:9px; }
+      .notes span + span::before { margin-right:9px; }
+      .visual { width:100%; margin-bottom:12px; gap:14px; padding:0; }
+      .visual::before { width:85%; height:calc(100% - 72px); left:12%; top:1%; }
+      .photo-wrap { width:84%; height:515px; }
+      .floating { width:112px; height:112px; padding:8px; bottom:76px; left:0; }
+      .floating b { font-size:24px; }
+      .floating span { max-width:88px; font-size:8px; letter-spacing:.05em; line-height:1.25; margin-top:5px; }
+      .slider { width:84%; justify-content:center; gap:12px; }
+      .ambient-lines { width:140%; left:-40%; opacity:.3; }
+      .motif-flower { right:-105px; width:235px; height:300px; opacity:.09; }
+      .motif-brush { left:-150px; width:310px; opacity:.055; }
+      .motif-petals { right:-60px; width:175px; opacity:.075; }
+      .motif-sparkles { left:-17px; width:110px; opacity:.08; }
+      .timer-track { width:26px; }
+      .portfolio { padding:72px 0 90px; }
+      .portfolio-head { display:block; margin-bottom:30px; }
+      .portfolio h2 { margin-bottom:17px; }
+      .portfolio-intro { font-size:15px; }
+      .portfolio-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:15px 12px; }
+      .work-card:nth-child(2),.work-card:nth-child(5) { transform:none; }
+      .work-card figcaption { gap:6px; padding-top:10px; }
+      .work-index { font-size:14px; }
+      .work-title { font-size:12px; }
+      .work-expand { display:none; }
+      .portfolio-end { margin-top:38px; display:block; }
+      .portfolio-end a { margin-top:19px; }
+      .offer { padding:75px 0 85px; }
+      .offer-head { display:block; margin-bottom:32px; }
+      .offer h2 { margin-bottom:20px; }
+      .offer-lead { font-size:15px; }
+      .offer-list { gap:22px; }
+      .offer-item { grid-template-columns:1fr; min-height:0; }
+      .offer-number { position:absolute; top:30px; left:25px; right:auto; z-index:1; font-size:22px; padding:0; }
+      .offer-content { padding:72px 25px 30px; }
+      .offer-type { margin-top:0; }
+      .offer-item h3 { font-size:34px; }
+      .offer-description { font-size:14px; line-height:1.75; }
+      .offer-price { margin-top:29px; padding-top:20px; }
+      .offer-price strong { font-size:39px; }
+      .offer-side { min-height:480px; }
+      .offer-foot { display:block; margin-top:31px; padding:29px 25px; }
+      .offer-foot a { margin-top:23px; }
+      .about { padding:75px 0 90px; }
+      .about-panel { display:block; min-height:0; }
+      .about-portrait { min-height:520px; }
+      .about-copy { padding:48px 25px 43px; }
+      .about h2 { font-size:clamp(44px,11vw,64px); }
+      .about-intro { font-size:15px; }
+      .about-quote { margin:30px 0; font-size:22px; padding-left:20px; }
+      .about-values { grid-template-columns:1fr; }
+      .about-bottom { align-items:flex-start; flex-direction:column; }
+      .transformation { padding:76px 0 92px; }
+      .transformation-head { display:block; margin-bottom:31px; }
+      .transformation h2 { margin-bottom:20px; }
+      .transformation-lead { font-size:15px; }
+      .transformation-layout { display:flex; flex-direction:column; gap:0; }
+      .comparison-widget { width:100%; }
+      .transformation-copy { padding:39px 2px 0; }
+      .comparison-handle { width:52px; height:52px; }
+      .reviews { padding:54px 0 58px; }
+      .reviews-head { display:block; margin-bottom:23px; }
+      .reviews h2 { max-width:440px; margin-bottom:20px; font-size:clamp(38px,9.3vw,47px); }
+      .reviews-controls { justify-content:flex-start; }
+      .reviews-viewport { margin-right:calc((100vw - 100%) / -2); }
+      .reviews-viewport::after { display:none; }
+      .reviews-track { gap:12px; padding-right:58px; }
+      .review-card { flex-basis:min(78vw,320px); height:238px; padding:21px 20px 18px; }
+      .review-text { font-size:17px; }
+      .reviews-note { padding-right:19px; }
+      .footer-top { grid-template-columns:1fr; gap:29px; }
+      .footer-card { padding:38px 25px 0; }
+      .footer-title { font-size:clamp(39px,10vw,54px); }
+      .footer-contact p { max-width:420px; }
+      .footer-nav { gap:13px 20px; }
+      .footer-meta { align-items:flex-start; flex-direction:column; gap:12px; }
+      .creator-credit { gap:6px; min-height:57px; margin-top:16px; padding:7px; border-radius:0; }
+      .creator-brand { gap:7px; }
+      .creator-logo { width:37px; height:37px; padding:4px; border-radius:0; }
+      .creator-text { gap:1px; }
+      .creator-text small { font-size:6px; letter-spacing:.08em; }
+      .creator-text > span { display:block; }
+      .creator-text strong { display:block; font-size:10px; }
+      .creator-text em { display:none; }
+      .creator-actions { gap:4px; }
+      .creator-actions a { min-height:31px; gap:4px; padding:0 8px; font-size:7px; }
+      .creator-actions svg { width:13px; height:13px; }
+      .creator-actions .creator-instagram { width:31px; padding:0; }
+    }
+    @media (max-width:420px) {
+      .photo-wrap { height:455px; }
+      .floating { width:102px; height:102px; bottom:75px; }
+      .floating b { font-size:22px; }
+      .floating span { max-width:78px; font-size:7.5px; margin-top:4px; }
+      .brand img { width:150px; }
+      .instagram-link .external { display:none; }
+      .work-title { font-size:11px; }
+      .work-dialog { padding:12px 14px 18px; }
+      .dialog-image { max-height:60dvh; }
+      .offer-side { min-height:430px; }
+      .about-portrait { min-height:450px; }
+      .about-signature { left:21px; right:21px; bottom:21px; }
+      .about-signature strong { font-size:27px; }
+      .comparison-label { top:13px; padding:8px 10px; }
+      .comparison-label.after { left:13px; }
+      .comparison-label.before { right:13px; }
+    }
+    @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms!important; transition-duration:.01ms!important; scroll-behavior:auto!important; } .timer-track { display:none; } }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="ambient-lines" aria-hidden="true">
+      <svg viewBox="0 0 900 900" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <path d="M-84 670C130 734 248 627 267 431C284 253 393 189 554 212C699 233 777 132 827-56" stroke="#b88e83" stroke-opacity=".45" stroke-width="1.4"/>
+        <path d="M-125 724C128 782 297 648 317 455C335 274 439 222 588 248C739 275 815 181 888-12" stroke="#b88e83" stroke-opacity=".3" stroke-width="1.2"/>
+        <path d="M-143 772C115 825 330 677 360 483C388 298 468 260 617 284C774 307 844 220 932 34" stroke="#b88e83" stroke-opacity=".2" stroke-width="1.1"/>
+      </svg>
+    </div>
+    <div class="ambient-motifs" aria-hidden="true">
+      <div class="ambient-motif motif-flower">
+        <svg viewBox="0 0 260 340" fill="none">
+          <path d="M126 337c8-58 5-114-9-168-8-32-2-62 18-90" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+          <path d="M120 211c-25-18-49-20-71-8 11 24 35 31 72 22M123 251c29-22 57-26 83-12-13 28-41 38-83 27" stroke="currentColor" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M134 81c-30-20-45-46-36-68 25 1 41 24 42 62 10-35 32-54 58-49 6 25-12 48-54 63 39-7 67 4 76 29-18 22-48 22-86-4 24 31 26 60 6 77-27-10-35-39-22-86-21 34-48 47-72 35-1-28 21-48 66-58-39-5-62-23-61-48 24-13 52 3 83 47Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+          <circle cx="134" cy="91" r="14" stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="134" cy="91" r="3.5" fill="currentColor"/>
+        </svg>
+      </div>
+      <div class="ambient-motif motif-brush">
+        <svg viewBox="0 0 390 180" fill="none">
+          <path d="M18 118c72-55 151-83 238-84 47 0 85 8 116 24" stroke="currentColor" stroke-width="18" stroke-linecap="round" opacity=".22"/>
+          <path d="M9 136c87-45 169-62 247-51 42 6 78 20 110 41" stroke="currentColor" stroke-width="5" stroke-linecap="round" opacity=".52"/>
+          <path d="M51 87c63-35 132-54 207-57" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="ambient-motif motif-petals">
+        <svg viewBox="0 0 220 245" fill="none">
+          <path d="M109 225c-5-53 5-99 29-138" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+          <path d="M139 89c-11-35 2-63 39-82 14 37 1 64-39 82ZM118 132c-35-4-58-23-68-56 38-8 63 11 68 56ZM119 169c29-23 59-26 89-10-19 33-49 39-89 10Z" stroke="currentColor" stroke-width="1.15" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="ambient-motif motif-sparkles">
+        <svg viewBox="0 0 150 180" fill="none">
+          <path d="M49 22c2 19 11 29 28 31-17 3-26 14-28 33-2-19-11-30-28-33 17-2 26-12 28-31ZM111 91c1 12 7 18 18 20-11 2-17 9-18 21-2-12-8-19-19-21 11-2 17-8 19-20ZM55 132c1 8 5 13 13 14-8 2-12 6-13 15-1-9-5-13-13-15 8-1 12-6 13-14Z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/>
+          <circle cx="112" cy="39" r="3" fill="currentColor" opacity=".65"/><circle cx="23" cy="113" r="2" fill="currentColor" opacity=".55"/>
+        </svg>
+      </div>
+    </div>
+    <div class="shell">
+      <header>
+        <a class="brand" href="#poczatek" aria-label="Adriana Maluje, początek"><img src="images/adriana-logo.svg" alt="Adriana Maluje" width="410" height="162"></a>
+        <nav class="main-nav" aria-label="Nawigacja główna">
+          <div class="nav-links">
+            <a href="#prace">Prace</a>
+            <a href="#oferta">Oferta</a>
+            <a href="#o-mnie">O mnie</a>
+            <a href="#przed-po">Efekt</a>
+            <a href="#opinie">Opinie</a>
+          </div>
+          <a class="instagram-link" href="https://www.instagram.com/adriana.maluje/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Adriany Maluje, otwórz profil w nowej karcie">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.7" y="2.7" width="18.6" height="18.6" rx="5.2"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.8" cy="6.4" r="1" fill="currentColor" stroke="none"/></svg>
+            <span>Instagram</span><span class="external" aria-hidden="true">↗</span>
+          </a>
+          <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Otwórz menu">
+            <span></span><span></span>
+          </button>
+        </nav>
+        <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+          <div class="mobile-menu-head"><strong>Odkryj stronę</strong><span>Adriana Maluje</span></div>
+          <a href="#poczatek"><span>01</span>Początek</a>
+          <a href="#prace"><span>02</span>Moje prace</a>
+          <a href="#oferta"><span>03</span>Oferta</a>
+          <a href="#o-mnie"><span>04</span>O mnie</a>
+          <a href="#przed-po"><span>05</span>Przed i po</a>
+          <a href="#opinie"><span>06</span>Opinie</a>
+          <a class="mobile-menu-contact" href="https://www.instagram.com/adriana.maluje/" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            <span>Instagram</span><b>Sprawdź termin ↗</b>
+          </a>
+          <div class="mobile-menu-meta"><span>Makijaż ślubny i okazjonalny</span><span>Giżycko</span></div>
+        </div>
+      </header>
+      <main>
+      <div class="hero" id="poczatek">
+        <section class="copy" aria-labelledby="hero-title">
+          <div class="eyebrow">Adriana Bękalska · Giżycko</div>
+          <h1 id="hero-title">Makijaż, w którym czujesz się <em>sobą</em></h1>
+          <p class="intro">Makijaż ślubny i okazjonalny z naturalnym efektem, który trwa. W Giżycku, okolicach i z dojazdem.</p>
+          <div class="actions">
+            <a class="primary" href="#prace">Moje przykładowe prace <span aria-hidden="true">↗</span></a>
+            <a class="secondary" href="https://www.instagram.com/adriana.maluje/" target="_blank" rel="noopener noreferrer">Umów makijaż</a>
+          </div>
+          <div class="notes" aria-label="Informacje o makijażu"><span>Naturalny efekt</span><span>Trwałość</span><span>Giżycko i okolice</span></div>
+        </section>
+        <div class="visual" aria-label="Moje przykładowe prace">
+          <div class="photo-wrap">
+            <img class="photo active" src="images/look-01.jpg" alt="Naturalny makijaż z delikatnie podkreślonymi oczami" width="360" height="640">
+            <img class="photo" src="images/look-02.jpg" alt="Elegancki makijaż okazjonalny" width="360" height="640">
+            <img class="photo" src="images/look-03.jpg" alt="Świeży, subtelny makijaż" width="360" height="640">
+            <img class="photo" src="images/look-04.jpg" alt="Makijaż z podkreślonym spojrzeniem i naturalną cerą" width="360" height="640">
+            <img class="photo" src="images/look-05.jpg" alt="Makijaż ślubny w ciepłym świetle" width="360" height="640">
+            <img class="photo" src="images/look-06.jpg" alt="Delikatny makijaż z satynowym wykończeniem" width="360" height="640">
+            <img class="photo" src="images/look-07.jpg" alt="Makijaż z miękkim cieniem i naturalnymi ustami" width="360" height="640">
+            <img class="photo" src="images/look-08.jpg" alt="Subtelny makijaż portretowy" width="360" height="640">
+          </div>
+          <div class="floating" aria-hidden="true"><b>beauty</b><span>po Twojemu<br>na każdą<br>okazję</span></div>
+          <span class="vertical" aria-hidden="true">naturalnie · z wyczuciem · na długo</span>
+          <div class="slider" aria-label="Galeria makijaży">
+            <span class="counter"><span id="current">01</span> <small>/ 08</small></span>
+            <span class="timer-track" aria-hidden="true"><span class="timer-progress" id="timer-progress"></span></span>
+            <button id="previous" type="button" aria-label="Poprzednie zdjęcie">←</button>
+            <button id="next" type="button" aria-label="Następne zdjęcie">→</button>
+          </div>
+        </div>
+      </div>
+      <section class="portfolio" id="prace" aria-labelledby="portfolio-title">
+        <div class="portfolio-head">
+          <div>
+            <span class="portfolio-kicker">Portfolio · @adriana.maluje</span>
+            <h2 id="portfolio-title">Moje przykładowe prace</h2>
+          </div>
+          <p class="portfolio-intro">Wykonuję makijaże ślubne i okazjonalne. Stawiam na naturalny efekt i trwałość. Giżycko i okolice, także z dojazdem.</p>
+        </div>
+        <div class="portfolio-grid">
+          <figure class="work-card">
+            <button class="work-open" type="button" aria-label="Powiększ pracę 01" data-description="Makijaż ślubny w ciepłych odcieniach. Delikatnie podkreślone oczy i naturalne wykończenie cery."><img src="images/look-05.jpg" alt="Makijaż ślubny w ciepłym świetle" width="360" height="640" loading="lazy"></button>
+            <figcaption><span class="work-index">01</span><span class="work-title">Makijaż ślubny w ciepłych odcieniach</span><span class="work-expand" aria-hidden="true">↗</span></figcaption>
+          </figure>
+          <figure class="work-card">
+            <button class="work-open" type="button" aria-label="Powiększ pracę 02" data-description="Subtelne podkreślenie spojrzenia i ust w neutralnym odcieniu."><img src="images/look-01.jpg" alt="Delikatny makijaż z podkreślonym spojrzeniem" width="360" height="640" loading="lazy"></button>
+            <figcaption><span class="work-index">02</span><span class="work-title">Naturalnie podkreślone spojrzenie</span><span class="work-expand" aria-hidden="true">↗</span></figcaption>
+          </figure>
+          <figure class="work-card">
+            <button class="work-open" type="button" aria-label="Powiększ pracę 03" data-description="Miękki cień na powiekach, naturalny kolor ust i rozświetlona cera."><img src="images/look-07.jpg" alt="Makijaż z miękkim cieniem i naturalnymi ustami" width="360" height="640" loading="lazy"></button>
+            <figcaption><span class="work-index">03</span><span class="work-title">Miękki cień i delikatne usta</span><span class="work-expand" aria-hidden="true">↗</span></figcaption>
+          </figure>
+          <figure class="work-card">
+            <button class="work-open" type="button" aria-label="Powiększ pracę 04" data-description="Mocniej zaznaczone oczy i satynowe wykończenie ust."><img src="images/look-02.jpg" alt="Makijaż okazjonalny z podkreślonymi oczami" width="360" height="640" loading="lazy"></button>
+            <figcaption><span class="work-index">04</span><span class="work-title">Makijaż z wyrazistym spojrzeniem</span><span class="work-expand" aria-hidden="true">↗</span></figcaption>
+          </figure>
+          <figure class="work-card">
+            <button class="work-open" type="button" aria-label="Powiększ pracę 05" data-description="Spokojna kolorystyka i delikatnie podkreślone spojrzenie."><img src="images/look-04.jpg" alt="Subtelny makijaż w naturalnych odcieniach" width="360" height="640" loading="lazy"></button>
+            <figcaption><span class="work-index">05</span><span class="work-title">Subtelny makijaż w naturalnych odcieniach</span><span class="work-expand" aria-hidden="true">↗</span></figcaption>
+          </figure>
+          <figure class="work-card">
+            <button class="work-open" type="button" aria-label="Powiększ pracę 06" data-description="Delikatny makijaż portretowy w neutralnych odcieniach."><img src="images/look-08.jpg" alt="Delikatny makijaż portretowy" width="360" height="640" loading="lazy"></button>
+            <figcaption><span class="work-index">06</span><span class="work-title">Delikatny makijaż portretowy</span><span class="work-expand" aria-hidden="true">↗</span></figcaption>
+          </figure>
+        </div>
+        <div class="portfolio-end">
+          <span>Więcej moich zdjęć i filmów znajdziesz na Instagramie.</span>
+          <a href="https://www.instagram.com/adriana.maluje/" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.7" y="2.7" width="18.6" height="18.6" rx="5.2"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.8" cy="6.4" r="1" fill="currentColor" stroke="none"/></svg>
+            Zobacz profil <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+      <section class="offer" id="oferta" aria-labelledby="offer-title">
+        <div class="offer-head">
+          <div>
+            <span class="offer-kicker">Oferta · Giżycko i okolice</span>
+            <h2 id="offer-title">Na Twoją okazję, <em>po Twojemu</em></h2>
+          </div>
+          <div>
+            <span class="offer-label">Propozycje makijażu</span>
+            <p class="offer-lead">Od subtelnego podkreślenia urody po makijaż na ten jeden, wyjątkowy dzień. Poniżej znajdziesz poglądowy zakres usług. Ostateczną propozycję dopasujemy do Twoich potrzeb.</p>
+          </div>
+        </div>
+        <div class="offer-list">
+          <article class="offer-item">
+            <span class="offer-number" aria-hidden="true">01</span>
+            <div class="offer-content">
+              <span class="offer-type">Spotkania · uroczystości · sesje</span>
+              <h3>Makijaż okazjonalny</h3>
+              <p class="offer-description">Na ważną uroczystość, przyjęcie albo wieczór, podczas którego chcesz poczuć się wyjątkowo. Lekki lub bardziej wyrazisty, zawsze dobrany do Ciebie, stroju i charakteru wydarzenia.</p>
+              <div class="offer-details" aria-label="Kierunek makijażu"><span>Twój styl</span><span>Naturalny efekt</span><span>Trwałe wykończenie</span></div>
+              <div class="offer-price"><small>Cena przykładowa</small><strong>220 <span>zł</span></strong></div>
+            </div>
+            <div class="offer-side">
+              <video muted loop playsinline preload="metadata" poster="videos/okazjonalny.jpg" aria-label="Film pokazujący makijaż okazjonalny"><source src="videos/okazjonalny.mp4" type="video/mp4"></video>
+              <span class="offer-video-top">Makijaż w ruchu</span>
+              <div class="offer-video-bottom"><div><span class="offer-video-phase">Zobacz efekt</span><a class="offer-video-source" href="https://www.instagram.com/reel/Dcn91vbo28m/" target="_blank" rel="noopener noreferrer">Cały film na Instagramie ↗</a></div><button class="offer-video-toggle" type="button" aria-label="Wstrzymaj film okazjonalny">Ⅱ</button></div>
+            </div>
+          </article>
+          <article class="offer-item">
+            <span class="offer-number" aria-hidden="true">02</span>
+            <div class="offer-content">
+              <span class="offer-type">Ten wyjątkowy dzień</span>
+              <h3>Makijaż ślubny</h3>
+              <p class="offer-description">Propozycja dla panny młodej, która chce wyglądać pięknie i nadal czuć się sobą. Miękkie przejścia, dopracowana cera i spojrzenie podkreślone w sposób, który dobrze wygląda na żywo i na zdjęciach.</p>
+              <div class="offer-details" aria-label="Kierunek makijażu"><span>Spójny z Tobą</span><span>Do zdjęć i na żywo</span><span>Na długi dzień</span></div>
+              <div class="offer-price"><small>Cena przykładowa</small><strong>300 <span>zł</span></strong></div>
+            </div>
+            <div class="offer-side" data-transformation="true">
+              <video muted loop playsinline preload="metadata" poster="videos/slubny.jpg" aria-label="Film pokazujący przemianę makijażu ślubnego"><source src="videos/slubny.mp4" type="video/mp4"></video>
+              <span class="offer-video-top">Przemiana ślubna</span>
+              <div class="offer-video-bottom"><div><span class="offer-video-phase">Przed</span><a class="offer-video-source" href="https://www.instagram.com/reel/Dc3livsIgSH/" target="_blank" rel="noopener noreferrer">Cały film na Instagramie ↗</a></div><button class="offer-video-toggle" type="button" aria-label="Wstrzymaj film ślubny">Ⅱ</button></div>
+            </div>
+          </article>
+          <article class="offer-item">
+            <span class="offer-number" aria-hidden="true">03</span>
+            <div class="offer-content">
+              <span class="offer-type">Poznajmy Twój kierunek</span>
+              <h3>Makijaż próbny</h3>
+              <p class="offer-description">Przykładowa propozycja spotkania przed ślubem. To przestrzeń na omówienie inspiracji, kolorów i wykończenia oraz sprawdzenie, w jakiej wersji makijażu czujesz się najlepiej.</p>
+              <div class="offer-details" aria-label="Kierunek makijażu"><span>Inspiracje</span><span>Dopasowanie kolorów</span><span>Spokojne przygotowanie</span></div>
+              <div class="offer-price"><small>Cena przykładowa</small><strong>250 <span>zł</span></strong></div>
+            </div>
+            <div class="offer-side" data-transformation="true">
+              <video muted loop playsinline preload="metadata" poster="videos/probny.jpg" aria-label="Film pokazujący przemianę makijażu próbnego"><source src="videos/probny.mp4" type="video/mp4"></video>
+              <span class="offer-video-top">Makijaż próbny</span>
+              <div class="offer-video-bottom"><div><span class="offer-video-phase">Przed</span><a class="offer-video-source" href="https://www.instagram.com/reel/Dc8B3xqI65t/" target="_blank" rel="noopener noreferrer">Cały film na Instagramie ↗</a></div><button class="offer-video-toggle" type="button" aria-label="Wstrzymaj film próbny">Ⅱ</button></div>
+            </div>
+          </article>
+        </div>
+        <div class="offer-foot">
+          <div class="offer-foot-copy">
+            <small>Ważne przed umówieniem terminu</small>
+            <p>Ta oferta i ceny są przykładowe. Aktualny zakres usług, dostępność terminu, cenę oraz możliwość dojazdu w Giżycku i okolicach potwierdź ze mną w wiadomości.</p>
+          </div>
+          <a href="https://www.instagram.com/adriana.maluje/" target="_blank" rel="noopener noreferrer">Zapytaj na Instagramie <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+      <section class="about" id="o-mnie" aria-labelledby="about-title">
+        <div class="about-panel">
+          <div class="about-portrait">
+            <img src="images/adriana-about.jpg" alt="Adriana Bękalska, makijażystka z Giżycka" width="900" height="1600" loading="lazy">
+            <div class="about-signature">
+              <div><strong>Adriana</strong><span>Makijażystka · Giżycko</span></div>
+              <a href="https://www.instagram.com/adriana.maluje/reel/DdmBNx1ot9I/" target="_blank" rel="noopener noreferrer" aria-label="Zobacz film Adriany na Instagramie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.7" y="2.7" width="18.6" height="18.6" rx="5.2"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.8" cy="6.4" r="1" fill="currentColor" stroke="none"/></svg></a>
+            </div>
+          </div>
+          <div class="about-copy">
+            <span class="about-kicker">O mnie · Adriana Bękalska</span>
+            <h2 id="about-title">Makijaż zaczyna się od <em>skóry</em></h2>
+            <p class="about-intro">Piękny makijaż nie zaczyna się u mnie od podkładu. Zaczyna się od dobrze przygotowanej skóry. Pielęgnacja jest nieodłącznym elementem mojej pracy, a efekt buduję spokojnie, cienkimi warstwami. Zależy mi na świeżym, naturalnym i lekkim wykończeniu, w którym nadal czujesz się sobą.</p>
+            <blockquote class="about-quote">„Przed. Po. I ten moment pomiędzy. To właśnie dla takich chwil kocham tworzyć.”</blockquote>
+            <div class="about-values">
+              <article class="about-value"><small>01 · podstawa</small><h3>Najpierw skóra</h3><p>Dobre przygotowanie pozwala uzyskać świeży efekt, który wygląda lekko.</p></article>
+              <article class="about-value"><small>02 · technika</small><h3>Cienkie warstwy</h3><p>Kontrola ilości produktu pomaga budować efekt dokładnie tam, gdzie jest potrzebny.</p></article>
+              <article class="about-value"><small>03 · ważny dzień</small><h3>Do ostatniego tańca</h3><p>Liczy się piękny początek i spokój, że makijaż zostanie z Tobą na dłużej.</p></article>
+            </div>
+            <div class="about-bottom">
+              <span>Na Instagramie pokazuję moją pracę, techniki, produkty i prawdziwe efekty bez filtrów.</span>
+              <a href="https://www.instagram.com/adriana.maluje/" target="_blank" rel="noopener noreferrer">Poznaj mnie bliżej <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="transformation" id="przed-po" aria-labelledby="transformation-title">
+        <div class="transformation-head">
+          <div>
+            <span class="transformation-kicker">Przed i po · prawdziwy efekt</span>
+            <h2 id="transformation-title">Przesuń i zobacz <em>różnicę</em></h2>
+          </div>
+          <p class="transformation-lead">Zobacz efekt makijażu okazjonalnego wykonanego w Giżycku. Subtelnie podkreślone oczy, świeża cera i naturalne wykończenie pokazują zmianę bez efektu maski.</p>
+        </div>
+        <div class="transformation-layout">
+          <div class="comparison-widget" data-comparison>
+            <img src="images/compare/przed.jpg" alt="Modelka przed wykonaniem makijażu" width="960" height="1200" loading="lazy">
+            <img class="comparison-after" src="images/compare/po.jpg" alt="Modelka po wykonaniu makijażu" width="960" height="1200" loading="lazy">
+            <div class="comparison-shade" aria-hidden="true"></div>
+            <span class="comparison-label after">Po</span>
+            <span class="comparison-label before">Przed</span>
+            <div class="comparison-divider" aria-hidden="true"><span class="comparison-handle">‹›</span></div>
+            <input class="comparison-range" type="range" min="0" max="100" value="50" step="1" aria-label="Porównaj efekt przed i po" aria-valuetext="Połowa zdjęcia po makijażu">
+            <span class="comparison-focus" aria-hidden="true"></span>
+          </div>
+          <div class="transformation-copy">
+            <span class="transformation-index">01</span>
+            <h3>Efekt, który nadal jest Twój</h3>
+            <p>Makijaż okazjonalny dopasowuję do urody, koloru oczu i charakteru wydarzenia. Zależy mi na lekkim wykończeniu cery, miękko podkreślonym spojrzeniu i efekcie, w którym nadal czujesz się sobą.</p>
+            <div class="compare-features">
+              <div class="compare-feature"><b>01</b><span>Naturalny efekt, który podkreśla rysy i nie zakrywa urody.</span></div>
+              <div class="compare-feature"><b>02</b><span>Kolory oraz intensywność dopasowane do Ciebie i Twojej okazji.</span></div>
+              <div class="compare-feature"><b>03</b><span>Trwałe wykończenie przygotowane na uroczystość, sesję lub ważny wieczór.</span></div>
+            </div>
+            <a class="compare-source" href="https://www.instagram.com/p/DdeCDOao_lh/" target="_blank" rel="noopener noreferrer">Zobacz cały film <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+      <section class="reviews" id="opinie" aria-labelledby="reviews-title">
+        <div class="reviews-head">
+          <div>
+            <span class="reviews-kicker">Opinie i reakcje · Instagram</span>
+            <h2 id="reviews-title">Wasze słowa o <em>moich pracach</em></h2>
+          </div>
+          <div class="reviews-controls" aria-label="Sterowanie opiniami">
+            <button class="reviews-arrow" id="reviews-previous" type="button" aria-label="Poprzednia opinia">←</button>
+            <span class="reviews-count"><span id="reviews-current">01</span> / 10</span>
+            <button class="reviews-arrow" id="reviews-next" type="button" aria-label="Następna opinia">→</button>
+          </div>
+        </div>
+        <div class="reviews-viewport">
+          <div class="reviews-track" id="reviews-track" tabindex="0" aria-label="Prawdziwe komentarze pod pracami na Instagramie">
+            <article class="review-card">
+              <p class="review-text">Wyszło cudownie 🔥</p>
+              <div class="review-author">
+                <img class="review-avatar" src="images/reviews/littlewhitebu.jpg" alt="Zdjęcie profilowe Littlewhitebu" width="96" height="96" loading="lazy">
+                <div class="review-person"><strong>Littlewhitebu🐹🌸</strong><span>@littlewhitebu</span></div>
+                <a class="review-source" href="https://www.instagram.com/p/DdmBNx1ot9I/" target="_blank" rel="noopener noreferrer" aria-label="Zobacz komentarz Littlewhitebu na Instagramie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+              </div>
+            </article>
+            <article class="review-card">
+              <p class="review-text">Śliczna ❤️</p>
+              <div class="review-author">
+                <img class="review-avatar" src="images/reviews/best_angie89.jpg" alt="Zdjęcie profilowe Angeliki Łukasiewicz" width="96" height="96" loading="lazy">
+                <div class="review-person"><strong>Angelika Łukasiewicz</strong><span>@best_angie89</span></div>
+                <a class="review-source" href="https://www.instagram.com/p/DdeCDOao_lh/" target="_blank" rel="noopener noreferrer" aria-label="Zobacz komentarz Angeliki na Instagramie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+              </div>
+            </article>
+            <article class="review-card">
+              <p class="review-text">Dziś była na weselu na którym robiłem zdjęcia😍 ładna dziewczyna 🥰</p>
+              <div class="review-author">
+                <img class="review-avatar" src="images/reviews/fneo.visuals.jpg" alt="Zdjęcie profilowe Mariusza Kulisia" width="96" height="96" loading="lazy">
+                <div class="review-person"><strong>Mariusz Kuliś photog</strong><span>@fneo.visuals</span></div>
+                <a class="review-source" href="https://www.instagram.com/p/Dc3livsIgSH/" target="_blank" rel="noopener noreferrer" aria-label="Zobacz komentarz Mariusza na Instagramie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+              </div>
+            </article>
+            <article class="review-card">
+              <p class="review-text">Pięknie 😍❤️</p>
+              <div class="review-author">
+                <img class="review-avatar" src="images/reviews/littlewhitebu.jpg" alt="Zdjęcie profilowe Littlewhitebu" width="96" height="96" loading="lazy">
+                <div class="review-person"><strong>Littlewhitebu🐹🌸</strong><span>@littlewhitebu</span></div>
+                <a class="review-source" href="https://www.instagram.com/p/Dcn91vbo28m/" target="_blank" rel="noopener noreferrer" aria-label="Zobacz komentarz Littlewhitebu na Instagramie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+              </div>
+            </article>
+            <article class="review-card">
+              <p class="review-text">Piękny, świeży look 👏✨❤️</p>
+              <div class="review-author">
+                <img class="review-avatar" src="images/reviews/littlewhitebu.jpg" alt="Zdjęcie profilowe Littlewhitebu" width="96" height="96" loading="lazy">
+                <div class="review-person"><strong>Littlewhitebu🐹🌸</strong><span>@littlewhitebu</span></div>
+                <a class="review-source" href="https://www.instagram.com/p/Dbxg3-dot9z/" target="_blank" rel="noopener noreferrer" aria-label="Zobacz komentarz Littlewhitebu na Instagramie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+              </div>
+            </article>
+            <article class="review-card">
+              <p class="review-text">Czy te kosmetyki prezentuje znana i ceniona w świecie modelka? 😍 Pięknie wyglądasz ❤️</p>
+              <div class="review-author">
+                <img class="review-avatar" src="images/reviews/muzykalna_mama.jpg" alt="Zdjęcie profilowe Eleonory Radel" width="96" height="96" loading="lazy">
+                <div class="review-person"><strong>Eleonora Radel</strong><span>@muzykalna_mama</span></div>
+                <a class="review-source" href="https://www.instagram.com/p/Dbp9CjoI49e/" target="_blank" rel="noopener noreferrer" aria-label="Zobacz komentarz Eleonory na Instagramie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+              </div>
+            </article>
+            <article class="review-card">
+              <p class="review-text">Piękny efekt 😍❤️</p>
+              <div class="review-author">
+                <img class="review-avatar" src="images/reviews/littlewhitebu.jpg" alt="Zdjęcie profilowe Littlewhitebu" width="96" height="96" loading="lazy">
+                <div class="review-person"><strong>Littlewhitebu🐹🌸</strong><span>@littlewhitebu</span></div>
+                <a class="review-source" href="https://www.instagram.com/p/Dbp9CjoI49e/" target="_blank" rel="noopener noreferrer" aria-label="Zobacz komentarz Littlewhitebu na Instagramie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+              </div>
+            </article>
+            <article class="review-card">
+              <p class="review-text">😍</p>
+              <div class="review-author">
+                <img class="review-avatar" src="images/reviews/rossmannowe.love.jpg" alt="Zdjęcie profilowe Rossmannowe Love" width="96" height="96" loading="lazy">
+                <div class="review-person"><strong>Promocje i nowości kosmetyczne!</strong><span>@rossmannowe.love</span></div>
+                <a class="review-source" href="https://www.instagram.com/p/Dbp9CjoI49e/" target="_blank" rel="noopener noreferrer" aria-label="Zobacz reakcję Rossmannowe Love na Instagramie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+              </div>
+            </article>
+            <article class="review-card">
+              <p class="review-text">O wow😍</p>
+              <div class="review-author">
+                <img class="review-avatar" src="images/reviews/diablica20.jpg" alt="Zdjęcie profilowe Elizabeth Alexandry" width="96" height="96" loading="lazy">
+                <div class="review-person"><strong>Elizabeth Alexandra 🪷</strong><span>@diablica20</span></div>
+                <a class="review-source" href="https://www.instagram.com/p/DbkiPY-ojLu/" target="_blank" rel="noopener noreferrer" aria-label="Zobacz komentarz Elizabeth na Instagramie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+              </div>
+            </article>
+            <article class="review-card">
+              <p class="review-text">😂😂😂jakie to prawdziwe</p>
+              <div class="review-author">
+                <img class="review-avatar" src="images/reviews/agnieszkapopiolek_.jpg" alt="Zdjęcie profilowe Agnieszki Popiołek" width="96" height="96" loading="lazy">
+                <div class="review-person"><strong>Agnieszka Popiołek</strong><span>@agnieszkapopiolek_</span></div>
+                <a class="review-source" href="https://www.instagram.com/p/Dbm7JtmoKlv/" target="_blank" rel="noopener noreferrer" aria-label="Zobacz komentarz Agnieszki na Instagramie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+              </div>
+            </article>
+          </div>
+        </div>
+        <p class="reviews-note">Prawdziwe komentarze i reakcje opublikowane pod moimi pracami na Instagramie. Kliknij ikonę przy autorze, aby zobaczyć źródłowy post.</p>
+      </section>
+      </main>
+      <footer class="site-footer" aria-labelledby="footer-title">
+        <div class="footer-card">
+          <div class="footer-top">
+            <div>
+              <a href="#poczatek" aria-label="Adriana Maluje, wróć na początek"><img class="footer-brand-logo" src="images/adriana-logo-light.svg" alt="Adriana Maluje" width="410" height="162"></a>
+              <span class="footer-kicker">Zarezerwuj swój termin</span>
+              <h2 class="footer-title" id="footer-title">Stwórzmy makijaż dopasowany <em>do Ciebie</em></h2>
+            </div>
+            <div class="footer-contact">
+              <p>Napisz do mnie na Instagramie. Opowiedz o okazji, terminie i efekcie, który Ci się podoba, a wspólnie dobierzemy najlepszą propozycję.</p>
+              <a class="footer-instagram" href="https://www.instagram.com/adriana.maluje/" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                <span>Sprawdź wolny termin</span><span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+          <nav class="footer-nav" aria-label="Nawigacja w stopce">
+            <a href="#poczatek">Początek</a>
+            <a href="#prace">Moje prace</a>
+            <a href="#oferta">Oferta</a>
+            <a href="#o-mnie">O mnie</a>
+            <a href="#przed-po">Przed i po</a>
+            <a href="#opinie">Opinie</a>
+          </nav>
+          <div class="footer-meta">
+            <span>© 2026 Adriana Maluje · Giżycko</span>
+            <span>Makijaż ślubny i okazjonalny</span>
+            <a href="#poczatek">Wróć na górę <span aria-hidden="true">↑</span></a>
+          </div>
+        </div>
+        <aside class="creator-credit" aria-label="Autor projektu strony">
+          <a class="creator-brand" href="https://www.hostcontrol.pl/" target="_blank" rel="noopener noreferrer" aria-label="Projekt strony: HostControl, Krystian Stykowski">
+            <img class="creator-logo" src="images/hostcontrol-mark.png" alt="HostControl" width="88" height="88" loading="lazy">
+            <span class="creator-text">
+              <small>Projekt i realizacja</small>
+              <span><strong>HostControl</strong><em>Krystian Stykowski</em></span>
+            </span>
+          </a>
+          <div class="creator-actions">
+            <a href="tel:+48723712365" aria-label="Zadzwoń do HostControl: 723 712 365">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.2 3.5 10 7.8 8.2 9.6c1.3 2.6 3.5 4.8 6.1 6.1l1.8-1.8 4.3 2.8c.4.3.6.8.5 1.3l-.5 2.2c-.1.5-.6.8-1.1.8C10.3 21 3 13.7 3 4.7c0-.5.3-1 .8-1.1L6 3.1c.5-.1 1 .1 1.2.4Z"/></svg>
+              <span>723 712 365</span>
+            </a>
+            <a class="creator-instagram" href="https://www.instagram.com/much4ty" target="_blank" rel="noopener noreferrer" aria-label="Instagram HostControl, much4ty">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.7" r="1"/></svg>
+            </a>
+          </div>
+        </aside>
+      </footer>
+    </div>
+  </div>
+  <dialog class="work-dialog" id="work-dialog" aria-labelledby="dialog-caption-title">
+    <button class="dialog-close" id="dialog-close" type="button" aria-label="Zamknij powiększenie">×</button>
+    <img class="dialog-image" id="dialog-image" alt="">
+    <div class="dialog-caption">
+      <small>Moje przykładowe prace <span id="dialog-number"></span></small>
+      <p id="dialog-caption-title"></p>
+    </div>
+  </dialog>
+  <script>
+    const photos=[...document.querySelectorAll('.photo')];
+    const progress=document.getElementById('timer-progress');
+    const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
+    const menuToggle=document.getElementById('menu-toggle');
+    const mobileMenu=document.getElementById('mobile-menu');
+    function setMenu(open){
+      menuToggle.setAttribute('aria-expanded',open?'true':'false');
+      menuToggle.setAttribute('aria-label',open?'Zamknij menu':'Otwórz menu');
+      mobileMenu.setAttribute('aria-hidden',open?'false':'true');
+      mobileMenu.classList.toggle('is-open',open);
+    }
+    menuToggle.addEventListener('click',()=>setMenu(menuToggle.getAttribute('aria-expanded')!=='true'));
+    mobileMenu.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>setMenu(false)));
+    document.addEventListener('keydown',event=>{
+      if(event.key==='Escape' && menuToggle.getAttribute('aria-expanded')==='true'){
+        setMenu(false);
+        menuToggle.focus();
+      }
+    });
+    document.addEventListener('click',event=>{
+      if(menuToggle.getAttribute('aria-expanded')==='true' && !event.target.closest('header')) setMenu(false);
+    });
+    window.addEventListener('resize',()=>{
+      if(window.innerWidth>1000) setMenu(false);
+    },{passive:true});
+    let current=0, autoplay=null;
+    function restartProgress(){
+      progress.style.animation='none';
+      void progress.offsetWidth;
+      progress.style.animation='';
+    }
+    function showPhoto(index){
+      current=(index+photos.length)%photos.length;
+      photos.forEach((photo,i)=>{
+        photo.classList.toggle('active',i===current);
+        photo.setAttribute('aria-hidden',i===current?'false':'true');
+      });
+      document.getElementById('current').textContent=String(current+1).padStart(2,'0');
+      restartProgress();
+    }
+    function startAutoplay(){
+      clearInterval(autoplay);
+      if(!reducedMotion.matches && !document.hidden && !document.getElementById('work-dialog').open){
+        restartProgress();
+        autoplay=setInterval(()=>showPhoto(current+1),5000);
+      }
+    }
+    function manualMove(step){ showPhoto(current+step); startAutoplay(); }
+    document.getElementById('previous').addEventListener('click',()=>manualMove(-1));
+    document.getElementById('next').addEventListener('click',()=>manualMove(1));
+    document.addEventListener('visibilitychange',startAutoplay);
+    reducedMotion.addEventListener('change',startAutoplay);
+    photos.forEach((photo,i)=>photo.setAttribute('aria-hidden',i===0?'false':'true'));
+    startAutoplay();
+
+    const workDialog=document.getElementById('work-dialog');
+    const dialogImage=document.getElementById('dialog-image');
+    const dialogNumber=document.getElementById('dialog-number');
+    const dialogCaption=document.getElementById('dialog-caption-title');
+    let lastWorkButton=null;
+    document.querySelectorAll('.work-open').forEach((button,index)=>{
+      button.addEventListener('click',()=>{
+        const image=button.querySelector('img');
+        lastWorkButton=button;
+        dialogImage.src=image.src;
+        dialogImage.alt=image.alt;
+        dialogNumber.textContent=String(index+1).padStart(2,'0');
+        dialogCaption.textContent=button.dataset.description;
+        clearInterval(autoplay);
+        progress.style.animationPlayState='paused';
+        workDialog.showModal();
+      });
+    });
+    document.getElementById('dialog-close').addEventListener('click',()=>workDialog.close());
+    workDialog.addEventListener('close',()=>{
+      dialogImage.removeAttribute('src');
+      progress.style.animationPlayState='running';
+      startAutoplay();
+      lastWorkButton?.focus();
+    });
+    const offerSection=document.querySelector('.offer');
+    if('IntersectionObserver' in window && !reducedMotion.matches){
+      const offerParts=offerSection.querySelectorAll('.offer-head,.offer-item,.offer-foot');
+      const offerObserver=new IntersectionObserver((entries,observer)=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },{threshold:.08,rootMargin:'0px 0px 35px 0px'});
+      offerSection.classList.add('motion-ready');
+      offerParts.forEach(part=>offerObserver.observe(part));
+    }
+    const aboutSection=document.querySelector('.about');
+    if('IntersectionObserver' in window && !reducedMotion.matches){
+      const aboutParts=aboutSection.querySelectorAll('.about-portrait,.about-copy');
+      const aboutObserver=new IntersectionObserver((entries,observer)=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },{threshold:.12,rootMargin:'0px 0px 40px 0px'});
+      aboutSection.classList.add('motion-ready');
+      aboutParts.forEach(part=>aboutObserver.observe(part));
+    }
+    const transformationSection=document.querySelector('.transformation');
+    if('IntersectionObserver' in window && !reducedMotion.matches){
+      const transformationParts=transformationSection.querySelectorAll('.comparison-widget,.transformation-copy');
+      const transformationObserver=new IntersectionObserver((entries,observer)=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },{threshold:.12,rootMargin:'0px 0px 40px 0px'});
+      transformationSection.classList.add('motion-ready');
+      transformationParts.forEach(part=>transformationObserver.observe(part));
+    }
+    document.querySelectorAll('[data-comparison]').forEach(widget=>{
+      const range=widget.querySelector('.comparison-range');
+      const updateComparison=()=>{
+        const value=Number(range.value);
+        widget.style.setProperty('--compare',`${value}%`);
+        range.setAttribute('aria-valuetext',`${value}% zdjęcia po makijażu`);
+      };
+      range.addEventListener('input',updateComparison);
+      range.addEventListener('change',updateComparison);
+      updateComparison();
+    });
+    const reviewsSection=document.querySelector('.reviews');
+    if('IntersectionObserver' in window && !reducedMotion.matches){
+      const reviewsParts=reviewsSection.querySelectorAll('.reviews-head,.reviews-viewport,.reviews-note');
+      const reviewsObserver=new IntersectionObserver((entries,observer)=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },{threshold:.1,rootMargin:'0px 0px 40px 0px'});
+      reviewsSection.classList.add('motion-ready');
+      reviewsParts.forEach(part=>reviewsObserver.observe(part));
+    }
+    const reviewsTrack=document.getElementById('reviews-track');
+    const reviewCards=[...reviewsTrack.querySelectorAll('.review-card')];
+    const reviewsCurrent=document.getElementById('reviews-current');
+    let reviewsFrame=null;
+    function reviewStep(){
+      const gap=parseFloat(getComputedStyle(reviewsTrack).gap)||0;
+      return reviewCards[0].getBoundingClientRect().width+gap;
+    }
+    function updateReviewCount(){
+      const step=reviewStep();
+      const index=Math.max(0,Math.min(reviewCards.length-1,Math.round(reviewsTrack.scrollLeft/step)));
+      reviewsCurrent.textContent=String(index+1).padStart(2,'0');
+    }
+    function moveReviews(direction){
+      reviewsTrack.scrollBy({left:reviewStep()*direction,behavior:reducedMotion.matches?'auto':'smooth'});
+    }
+    document.getElementById('reviews-previous').addEventListener('click',()=>moveReviews(-1));
+    document.getElementById('reviews-next').addEventListener('click',()=>moveReviews(1));
+    reviewsTrack.addEventListener('scroll',()=>{
+      cancelAnimationFrame(reviewsFrame);
+      reviewsFrame=requestAnimationFrame(updateReviewCount);
+    },{passive:true});
+    reviewsTrack.addEventListener('keydown',event=>{
+      if(event.key==='ArrowRight'){ event.preventDefault(); moveReviews(1); }
+      if(event.key==='ArrowLeft'){ event.preventDefault(); moveReviews(-1); }
+    });
+    window.addEventListener('resize',updateReviewCount,{passive:true});
+    updateReviewCount();
+    const siteFooter=document.querySelector('.site-footer');
+    if('IntersectionObserver' in window && !reducedMotion.matches){
+      const footerParts=siteFooter.querySelectorAll('.footer-card,.creator-credit');
+      const footerObserver=new IntersectionObserver((entries,observer)=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },{threshold:.08,rootMargin:'0px 0px 35px 0px'});
+      siteFooter.classList.add('motion-ready');
+      footerParts.forEach(part=>footerObserver.observe(part));
+    }
+    const offerVideoPanels=[...document.querySelectorAll('.offer-side')];
+    function updateOfferVideo(panel){
+      const video=panel.querySelector('video');
+      const toggle=panel.querySelector('.offer-video-toggle');
+      toggle.textContent=video.paused?'▶':'Ⅱ';
+      toggle.setAttribute('aria-label',video.paused?'Odtwórz film':'Wstrzymaj film');
+      if(panel.dataset.transformation){
+        panel.querySelector('.offer-video-phase').textContent=video.currentTime<1.4?'Przed':'Po';
+      }
+    }
+    function playOfferVideo(panel){
+      if(panel.dataset.userPaused==='true' || reducedMotion.matches || document.hidden) return;
+      panel.querySelector('video').play().catch(()=>updateOfferVideo(panel));
+    }
+    const offerVideoObserver='IntersectionObserver' in window ? new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        const panel=entry.target;
+        panel.dataset.inView=entry.isIntersecting?'true':'false';
+        if(entry.isIntersecting) playOfferVideo(panel);
+        else panel.querySelector('video').pause();
+      });
+    },{threshold:.25}) : null;
+    offerVideoPanels.forEach(panel=>{
+      const video=panel.querySelector('video');
+      const toggle=panel.querySelector('.offer-video-toggle');
+      video.muted=true;
+      video.addEventListener('play',()=>updateOfferVideo(panel));
+      video.addEventListener('pause',()=>updateOfferVideo(panel));
+      video.addEventListener('timeupdate',()=>updateOfferVideo(panel));
+      toggle.addEventListener('click',()=>{
+        if(video.paused){
+          panel.dataset.userPaused='false';
+          video.play().catch(()=>updateOfferVideo(panel));
+        }else{
+          panel.dataset.userPaused='true';
+          video.pause();
+        }
+      });
+      video.addEventListener('click',()=>toggle.click());
+      updateOfferVideo(panel);
+      offerVideoObserver?.observe(panel);
+    });
+    document.addEventListener('visibilitychange',()=>{
+      offerVideoPanels.forEach(panel=>{
+        if(document.hidden) panel.querySelector('video').pause();
+        else if(panel.dataset.inView==='true') playOfferVideo(panel);
+      });
+    });
+    reducedMotion.addEventListener('change',()=>{
+      offerVideoPanels.forEach(panel=>{
+        if(reducedMotion.matches) panel.querySelector('video').pause();
+        else if(panel.dataset.inView==='true') playOfferVideo(panel);
+      });
+    });
+
+  </script>
+</body>
+</html>
